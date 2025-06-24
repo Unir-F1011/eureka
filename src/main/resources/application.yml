@@ -1,9 +1,9 @@
-spring:
-  application:
-    name: ${SERVER_NAME}
-
 server:
   port: ${SERVER_PORT}
+
+spring:
+  application: 
+    name: ${SERVER_NAME}
 
 eureka:
   client:
@@ -11,3 +11,5 @@ eureka:
     fetchRegistry: false
   instance:
     hostname: ${EUREKA_HOST}
+  server:
+    renewal-percent-threshold: ${EUREKA_RENEWAL}

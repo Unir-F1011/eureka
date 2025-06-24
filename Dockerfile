@@ -25,7 +25,7 @@ WORKDIR /app
 EXPOSE 8761
 
 
-COPY --from=build /app/target/inventory-products-0.0.1-SNAPSHOT.jar ./app.jar
+COPY --from=build /app/target/eureka-0.0.1-SNAPSHOT.jar ./app.jar
 
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
