@@ -1,5 +1,5 @@
-# Etapa 1: Build con Maven y JDK 24
-FROM maven:3.9.6-eclipse-temurin-24 AS build
+# Etapa 1: Build con Maven y JDK 21
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 
 
 WORKDIR /app
@@ -15,8 +15,8 @@ COPY src ./src
 
 RUN mvn clean package -DskipTests
 
-# Etapa 2: Imagen runtime con OpenJDK 24 JRE
-FROM eclipse-temurin:24-jre-alpine
+# Etapa 2: Imagen runtime con OpenJDK 21 JRE
+FROM openjdk:21
 
 
 WORKDIR /app
