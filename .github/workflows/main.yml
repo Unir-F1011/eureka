@@ -1,6 +1,6 @@
-name: Build & Deploy Eureka
 
-on:
+name: Build & Deploy eureka
+'on':
   push:
     branches: ["master", "developer", "dev-miguel"]
   pull_request:
